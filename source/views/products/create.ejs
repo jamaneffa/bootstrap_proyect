@@ -2,20 +2,16 @@
 <html lang="en">
 <%- include ('../partials/head.ejs') %>
 <body>
-    <h1>Hola soy la VISTA DE CREACION DE PRODUCTOS</h1>
-    <br>
-    <hr>
-    <br>
-    <form action="/products/create" method="post" enctype="multipart/form-data">
-        <label for="name">Nombre</label>
-        <input id="name" name="name" type="text" placeholder="Ingrse el nombre del producto...">
-        <label for="img">Imagen</label>
-        <input id="img" name="img" type="file">
-        <button type="submit">Enviar</button>
-    </form>
-    <br>
-    <hr>
-    <br>
-    <a href="/">Volver</a>
+    <div class="container-fluid">
+        <%- include ('../partials/navbar.ejs') %>
+        <form action="/products/create" method="post" enctype="multipart/form-data">
+            <label for="name">Nombre</label>
+            <input id="name" name="name" type="text" placeholder="Ingrse el nombre del producto...">
+            <label for="img">Imagen</label>
+            <input id="img" name="img" type="file">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <%- include ('../partials/scripts.ejs') %>
 </body>
 </html>

@@ -20,7 +20,6 @@ const productControllers = {
 
     store: async (req, res) => {
         try {
-            console.log(req.file)
             return res.json({
                 nombre: req.body.name,
                 archivo: req.file.fieldname,

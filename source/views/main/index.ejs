@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include ('../partials/head.ejs') %>
-<body>
-    <h1>Hola soy el INDEX</h1>
-    <br>
-    <hr>
-    <br>
-    <ul>
-        <li><a href="./products/list">Lista de Productos</a></li>
-        <li><a href="./products/create">Crear Producto</a></li>
-        <li><a href="./users/login">Login de Usuarios</a></li>
-    </ul>
-</body>
+    <%- include ('../partials/head.ejs') %>
+    <body>
+        <div class="container-fluid">
+            <%- include ('../partials/navbar.ejs') %>
+            <div class="row">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/img/nature497978_1920.jpg" class="d-block w-100" alt="image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/plumage176723_1920.jpg" class="d-block w-100" alt="image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/sheet546475_1920.jpg" class="d-block w-100" alt="image">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <a class="btn btn-outline-primary" href="./products/list" role="button">Lista de Productos</a>
+                <a class="btn btn-outline-primary" href="./products/create" role="button">Crear Producto</a>
+                <a class="btn btn-outline-primary" href="./users/login" role="button">Log In</a>
+                <a class="btn btn-outline-primary" href="./users/register" role="button">Registrar Usuario</a>
+            </div>
+        </div>
+        <%- include ('../partials/scripts.ejs') %>
+    </body>
 </html>
