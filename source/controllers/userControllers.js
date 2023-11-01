@@ -2,7 +2,7 @@ const userControllers = {
 
     login: async (req, res) => {
         try {
-            return res.render('../views/users/login.ejs');
+            return res.render('users/login');
         } 
         catch (error) { 
             console.log(error.message); 
@@ -10,7 +10,7 @@ const userControllers = {
     },
     register: async (req, res) => {
         try {
-            return res.render('../views/users/register.ejs');
+            return res.render('users/register');
         } 
         catch (error) { 
             console.log(error.message); 
@@ -18,7 +18,12 @@ const userControllers = {
     },
     record: async (req, res) => {
         try {
-            return res.json(req.body);
+            return res.json({
+                nombre: req.body.name,
+                email: req.body.email,
+                avatar: req.file ? req.file.filename : "No cargo imagen",
+                Volver: "http://localhost:2020"
+            });
         } 
         catch (error) { 
             console.log(error.message); 

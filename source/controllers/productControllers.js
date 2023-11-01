@@ -2,7 +2,7 @@ const productControllers = {
 
     list: async (req, res) => {
         try {
-            return res.render('../views/products/list.ejs');
+            return res.render('products/list.ejs');
         } 
         catch (error) { 
             console.log(error.message); 
@@ -11,7 +11,7 @@ const productControllers = {
 
     create: async (req, res) => {
         try {
-            return res.render('../views/products/create.ejs');
+            return res.render('products/create.ejs');
         } 
         catch (error) { 
             console.log(error.message); 
@@ -22,7 +22,7 @@ const productControllers = {
         try {
             return res.json({
                 nombre: req.body.name,
-                archivo: req.file.fieldname,
+                archivo: req.file.filename,
                 Volver: "http://localhost:2020"
             });
         } 
