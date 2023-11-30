@@ -3,10 +3,10 @@ const app = express()
 
 const {resolve} = require('path')
 
-const port = 2020
+const port = process.env.PORT || 2020
 app.listen(port, () => console.log (`Starting Server in http://localhost:${port}`))
 
-app.use(express.static(resolve(__dirname, '../assets')))
+app.use(express.static(resolve(__dirname, '../public')))
 
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
